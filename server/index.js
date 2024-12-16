@@ -10,11 +10,6 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors({
-  origin: 'http://localhost:3000',
-  methods: ['GET'],
-}));
-
 console.log('Starting server...');
 
 app.get('/3DModelSDK.js', (req, res) => {
