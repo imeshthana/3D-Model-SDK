@@ -10,6 +10,8 @@ const cors = require('cors');
 
 const app = express();
 
+app.use(cors());
+
 console.log('Starting server...');
 
 app.get('/3DModelSDK.js', (req, res) => {
@@ -29,6 +31,7 @@ app.get('*', async (req, res) => {
                 return true;
             } catch (err) {
                 console.error('Model processing error');
+                console.error(err);
                 return false;
             }
         };

@@ -12,7 +12,7 @@ function ModelComponent() {
         const sdk = new window.ModelSDK();
 
         sdk.render(containerRef.current, {
-          modelName: 'bmw',
+          modelName: 'jeep',
           autoRotate: 'true',
           cameraControls: 'true',
           width: '500px',

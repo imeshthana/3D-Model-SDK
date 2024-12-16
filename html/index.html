@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="http://localhost:8888/3DModelSDK.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>HTML</title>
+  </head>
+  <body>
+    <h1>3D Model SDK</h1>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const checkSDKInterval = setInterval(() => {
+           if (window.ModelSDK) {
+             clearInterval(checkSDKInterval);
+             
+             const sdk = new window.ModelSDK();
+
+             sdk.render('model-container', {
+               modelName: 'jeep',
+               autoRotate: 'true',
+               cameraControls: 'true',
+               width: '500px',
+               height: '200px',
+             });
+           }
+         }, 100);
+      });
+    </script>
+
+    <div id="model-container"></div>
+  </body>
+</html>
